@@ -1,0 +1,7 @@
+{{ if and (.Get "width") (.Get "height") }}
+<div class="responsive">
+  <img src="{{ .Get `src` }}" alt="{{ .Get `alt` }}" width="{{ .Get `width` }}" height="{{ .Get `height` }}"/>
+</div>
+{{ else }}
+<img class="responsive" src="{{ .Get `src` }}" alt="{{ .Get `alt` }}"/>
+{{ end }}

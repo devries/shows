@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h1>Black Rock City Electronic Art Technical Support</h1>
+  <img class="smallimage" src="/img/eats.svg" alt="logo">
+
+  <p>We are a volunteer organization dedicated to providing assistance to
+  artists whose installations make use of electronics, be it LED lighting,
+  electromechanical servos, or electonic audio. If your art needs some
+  troubleshooting be on the lookout for people with the above patch, and we will
+  (possibly) help you.</p>
+
+  <p>Also check out our <a href="{{ `guides` | relURL }}">Guides</a> to technical
+  topics mostly related to electronic art.</p>
+{{ end }}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "graph.html" . }}
+    <link rel="preload" as="font" href="/fonts/LinLibertine_DR.woff" type="font/woff">
+    <link rel="icon" href="/img/favicon.png"/>
+    <link href="/css/letter.css" rel="stylesheet">
+    <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+    {{- block "headincludes" . }}{{- end }}
+    </head>
+
+    <body class="fullpage">
+        {{- partial "header.html" . -}}
+        <div class="main">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

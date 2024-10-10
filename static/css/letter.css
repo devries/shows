@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Linux Libertine Display O";
+  src: url("/fonts/LinLibertine_DR.woff") format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+.fullpage {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 700px;
+  background-color: #ffefdf;
+  color: #111133;
+  font-family: 'Linux Libertine Display O', Georgia, serif;
+  font-weight: 300;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fullpage {
+    background-color: #39311d;
+    color: #d4d6c6;
+  }
+  .fullpage a {
+    color: #a0cfff;
+  }
+}
+
+.header {
+  padding: 10px;
+  padding-top: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header .sitetitle {
+  flex: 1 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.header > h1,
+.header > h2,
+.header > h3,
+.header > h4
+.header > h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.titleline {
+  padding: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.titleline > h1,
+.titleline > h2,
+.titleline > h3,
+.titleline > h4,
+.titleline > h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.titleline .date {
+  flex: 1 0 auto;
+  text-align: right;
+  margin-right: 0;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.main {
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 auto;
+}
+
+.footer {
+  padding: 10px;
+  font-size: small;
+  text-align: right;
+}
+
+.tags {
+  padding-top: 15px;
+  font-size: small;
+}
+
+@media all and (max-width: 500px) {
+  .header {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .titleline {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .titleline .date {
+    text-align: center;
+  }
+  .titleline > h1,
+  .titleline > h2,
+  .titleline > h3,
+  .titleline > h4,
+  .titleline > h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: center;
+  }
+  .header > h1,
+  .header > h2,
+  .header > h3,
+  .header > h4
+  .header > h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.responsive {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.responsive img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.smallimage {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} 
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+ul.pagelist {
+  list-style-type: none;
+  font-size: 1.17em;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pagelist li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+dd {
+  margin-top: 5px;
+  margin-bottom: 16px;
+}

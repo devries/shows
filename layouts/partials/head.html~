@@ -1,0 +1,28 @@
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+
+<meta property="og:title" content="{{ .Title }}"/>
+<meta property="twitter:title" content="{{ .Title }}"/>
+{{ if .Summary }}
+<meta property="description" content="{{ .Summary | plainify }}"/>
+<meta property="og:description" content="{{ .Summary | plainify }}"/>
+<meta property name="twitter:description" content="{{ .Summary | plainify }}"/>
+{{ else }}
+<meta property="description" content="Black Rock City Electronic Art Technical Support"/>
+<meta property="og:description" content="Black Rock City Electronic Art Technical Support"/>
+<meta property name="twitter:description" content="Black Rock City Electronic Art Technical Support"/>
+{{ end }}
+<meta property="og:image" content="{{ .Site.BaseURL }}img/favicon.png"/>
+<meta name="twitter:image" content="{{ .Site.BaseURL }}img/favicon.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="{{ .Site.Title }}"/>
+
+<link rel="icon" href="/img/favicon.png"/>
+<link href="/css/letter.css" rel="stylesheet">
+<link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+</head>

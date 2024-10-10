@@ -1,0 +1,8 @@
+<footer class="footer">
+  {{ $t := (time "2025-01-01") }}
+  {{ if $t.After now }}
+    &copy 2024 Unnecessary
+  {{ else }}
+    &copy 2024-{{ dateFormat "2006" now }} Unnecessary
+  {{ end }}
+</footer>

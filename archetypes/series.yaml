@@ -1,0 +1,8 @@
+---
+  name: "{{ replace .Name "_" " " | title }}"
+  season:
+  date:
+  service:
+  # The fields below are optional and can be removed
+  displayDate: 
+  universe: 

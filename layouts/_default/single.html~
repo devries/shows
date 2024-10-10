@@ -1,0 +1,23 @@
+{{ define "title" }}
+  {{- .Title }} - {{ .Site.Title -}}
+{{ end }}
+{{ define "main" }}
+  <div class="titleline">
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.Date }}
+  <h3 class="date">{{ dateFormat "Jan 2, 2006" .Params.Date }}</h3>
+  {{ end }}
+  </div>
+  {{ if .Params.Subtitle }}
+  <h2>{{ .Params.Subtitle }}</h2>
+  {{ end }}
+  {{ .Content }}
+  {{ if .Params.Tags }}
+    <div class="tags">
+      Tags:
+      {{ range .Params.Tags }}
+        <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}

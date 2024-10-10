@@ -1,0 +1,8 @@
+<footer class="footer">
+  {{ $t := (time "2023-01-01") }}
+  {{ if $t.After now }}
+    &copy 2022 BRC EATS
+  {{ else }}
+    &copy 2022-{{ dateFormat "2006" now }} BRC EATS
+  {{ end }}
+</footer>

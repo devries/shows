@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ $today := dateFormat "2006-01-02" now }}
+{{ $all := sort $.Site.Data.series "date" }}
+{{ $later := where $all "date" "gt" $today }}
+{{ $earlier := where $all "date" "le" $today }}
+{{ $twoweeks := time.Duration "hour" -336 }}
+{{ $weeksago := now.Add $twoweeks }}
+{{ $recent_date := dateFormat "2006-01-02" $weeksago }}
+{{ $recent := where $earlier "date" "gt" $recent_date }}
+
+{{ if $recent }}
+<h1>New</h1>
+<ul class="pagelist">
+{{ range $recent }}
+  <li><em>{{ .name }}</em>, Season {{ .season }} &mdash; ({{ .service }}): {{ if .displayDate }} {{ .displayDate }}{{ else }}{{ dateFormat "Jan 2, 2006" .date }}{{ end }}
+{{ end }}
+</ul>
+{{ end }}
+
+{{ if $later }}
+<h1>Coming Soon</h1>
+<ul class="pagelist">
+{{ range first 20 $later }}
+  <li><em>{{ .name }}</em>, Season {{ .season }} &mdash; ({{ .service }}): {{ if .displayDate }} {{ .displayDate }}{{ else }}{{ dateFormat "Jan 2, 2006" .date }}{{ end }}
+{{ end }}
+</ul>
+{{ end }}
+{{ end }}
