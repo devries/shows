@@ -19,7 +19,7 @@
 <h2>New</h2>
 <ul class="pagelist">
 {{ range $recent }}
-  <li><em>{{ .name }}</em>, Season {{ .season }} &mdash; ({{ .service }}): {{ if .displayDate }} {{ .displayDate }}{{ else }}{{ dateFormat "Jan 2, 2006" .date }}{{ end }}
+  {{ partial "show.html" . }}
 {{ end }}
 </ul>
 {{ end }}
@@ -28,7 +28,7 @@
 <h2>Coming Soon</h2>
 <ul class="pagelist">
 {{ range $later }}
-  <li><em>{{ .name }}</em>, Season {{ .season }} &mdash; ({{ .service }}): {{ if .displayDate }} {{ .displayDate }}{{ else }}{{ dateFormat "Jan 2, 2006" .date }}{{ end }}
+  {{ partial "show.html" . }}
 {{ end }}
 </ul>
 {{ end }} 

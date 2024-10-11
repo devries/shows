@@ -1,0 +1,1 @@
+<li><em>{{ .name }}</em>, Season {{ .season }} &mdash; {{ .service }}: {{ if .displayDate }} {{ .displayDate }}{{ else }}{{ dateFormat "Jan 2, 2006" .date }}{{ end }}
