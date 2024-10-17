@@ -1,6 +1,0 @@
-<dl>
-  {{ range sort (sort $.Site.Data.vendors "name") "weight" }}
-  <dt><a href="{{ .url }}">{{ .name }}</a></dt>
-  <dd>{{ .description }}</dd>
-  {{ end }}
-</dl>

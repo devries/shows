@@ -1,3 +1,0 @@
-<video class="responsive" autoplay controls>
-  <source src="{{ .Get `src`}}"/>
-</video>

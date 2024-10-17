@@ -1,4 +1,0 @@
-{{ define "main" }}
-  <h1>404 - Land of the Lost</h1>
-  <p>Greetings traveler. You have gone where no one has gone before, and entered a barren wasteland of nothingness. Turn back now, for only misery and despair await you here.</p>
-{{ end }}
