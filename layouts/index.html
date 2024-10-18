@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+<p>Learn how <a href="/pages/about#how-to-contribute">you can contribute</a>.</p>
+
 {{ $today := dateFormat "2006-01-02" now }}
 {{ $all := sort $.Site.Data.series "date" }}
 {{ $later := where $all "date" "gt" $today }}
