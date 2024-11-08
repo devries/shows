@@ -38,6 +38,7 @@ currently have pages for the following services:
 - Hulu
 - Netflix
 - Paramount+
+- AMC+
 
 Feel free to add a service if it is missing. The `universe` tag is provided to
 links series from the same universe. We currently have the following universes:
