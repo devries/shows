@@ -1,0 +1,29 @@
+{{ define "title" }}
+  {{- .Title }} - {{ .Site.Title -}}
+{{ end }}
+
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+{{ if .Params.Subtitle }}
+<h2>{{ .Params.Subtitle }}</h2>
+{{ end }}
+
+{{ $today := dateFormat "2006-01-02" now }}
+{{ $all := sort $.Site.Data.series "date" }}
+{{ $earlier := where $all "date" "le" $today }}
+{{ $tenweeks := time.Duration "hour" -1680 }}
+{{ $weeksago := now.Add $tenweeks }}
+{{ $recent_date := dateFormat "2006-01-02" $weeksago }}
+{{ $recent := where $earlier "date" "gt" $recent_date }}
+
+{{ if $recent }}
+<ul class="pagelist">
+{{ range $recent }}
+  {{ partial "show.html" . }}
+{{ end }}
+</ul>
+{{ else }}
+<p>No titles found released in the last 10 weeks.</p>
+{{ end }}
+{{ end }}
