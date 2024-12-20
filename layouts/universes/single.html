@@ -8,15 +8,15 @@
 {{ $filter := where $all "universe" .Title }}
 {{ $later := where $filter "date" "gt" $today }}
 {{ $earlier := where $filter "date" "le" $today }}
-{{ $twoweeks := time.Duration "hour" -336 }}
-{{ $weeksago := now.Add $twoweeks }}
+{{ $prior := time.Duration "hour" -4320 }}
+{{ $weeksago := now.Add $prior }}
 {{ $recent_date := dateFormat "2006-01-02" $weeksago }}
 {{ $recent := where $earlier "date" "gt" $recent_date }}
   
 <h1>{{ .Title }}</h1>
 
 {{ if $recent }}
-<h2>New</h2>
+<h2>Available</h2>
 <ul class="pagelist">
 {{ range $recent }}
   {{ partial "show.html" . }}

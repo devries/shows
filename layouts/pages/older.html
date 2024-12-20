@@ -12,7 +12,7 @@
 {{ $today := dateFormat "2006-01-02" now }}
 {{ $all := sort $.Site.Data.series "date" }}
 {{ $earlier := where $all "date" "le" $today }}
-{{ $tenweeks := time.Duration "hour" -1680 }}
+{{ $tenweeks := time.Duration "hour" -4320 }}
 {{ $weeksago := now.Add $tenweeks }}
 {{ $recent_date := dateFormat "2006-01-02" $weeksago }}
 {{ $recent := where $earlier "date" "gt" $recent_date }}
