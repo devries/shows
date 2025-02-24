@@ -39,4 +39,4 @@ jobs:
       - name: 🔑 Populate Key
         run: echo "${{ secrets.PRIVATE_SSH_KEY }}" > ~/.ssh/id_rsa
       - name: 🚀 Upload
-        run: rsync -rlp --stats --delete -e 'ssh -o StrictHostKeyChecking=no' public/ webdeploy@100.73.78.25:/srv/shows/
+        run: rsync -rlp --stats --delete -e 'ssh -o StrictHostKeyChecking=no' public/ webdeploy@192.168.14.1:/srv/shows/
