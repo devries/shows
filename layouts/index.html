@@ -6,8 +6,8 @@
 {{ $all := sort $.Site.Data.series "date" }}
 {{ $later := where $all "date" "gt" $today }}
 {{ $earlier := where $all "date" "le" $today }}
-{{ $twoweeks := time.Duration "hour" -336 }}
-{{ $weeksago := now.Add $twoweeks }}
+{{ $fourweeks := time.Duration "hour" -672 }}
+{{ $weeksago := now.Add $fourweeks }}
 {{ $recent_date := dateFormat "2006-01-02" $weeksago }}
 {{ $recent := where $earlier "date" "gt" $recent_date }}
 
