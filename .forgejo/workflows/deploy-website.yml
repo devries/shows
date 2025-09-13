@@ -11,14 +11,12 @@ on:
 jobs:
   deploy:
     name: Build and Deploy
-    runs-on: ubuntu-latest
+    runs-on: docker
     steps:
       - name: 🛒 Checkout
         uses: actions/checkout@v3
         with:
           submodules: 'true'
-        env:
-          GIT_SSL_NO_VERIFY: true
       - name: ✨ Setup Hugo
         env:
           HUGO_VERSION: 0.135.0
