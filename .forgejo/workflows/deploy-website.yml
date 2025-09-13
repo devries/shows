@@ -25,7 +25,7 @@ jobs:
           cd ~/hugo
           curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" --output hugo.tar.gz
           tar -xvzf hugo.tar.gz
-          sudo mv hugo /usr/local/bin          
+          mv hugo /usr/local/bin          
       - name: 🛠️ Build
         run: hugo
       - name: Install Rsync and SSH
